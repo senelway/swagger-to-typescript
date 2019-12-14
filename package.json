@@ -1,0 +1,47 @@
+{
+  "name": "swatts",
+  "version": "0.1.0-beta.1",
+  "homepage": "https://github.com/stk-dmitry/swagger-to-typescript#readme",
+  "description": "generate typescript interface and enums using swagger",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stk-dmitry/swagger-to-typescript.git"
+  },
+  "keywords": [
+    "swagger",
+    "typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/stk-dmitry/swagger-to-typescript/issues"
+  },
+  "author": "stk-dmitry <Strelkov Dmitry>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf lib && yarn build-cjs && yarn build-umd && yarn build-esm",
+    "build-cjs": "./node_modules/.bin/rollup src/index.ts --config --file lib/index.js",
+    "build-umd": "./node_modules/.bin/rollup src/index.ts --config --format umd --file lib/index.umd.js",
+    "build-esm": "./node_modules/.bin/rollup src/index.ts --config --format esm --file lib/index.esm.js",
+    "lint": "./node_modules/.bin/tslint -p . ./src/*.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.17",
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.6",
+    "babel-plugin-rewire-exports": "^2.0.0",
+    "rollup": "^1.27.12",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-terser": "^5.1.3",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "typescript": "^3.7.3",
+    "git-diff": "^2.0.6"
+  },
+  "peerDependencies": {
+    "axios": ">= 0.19.0"
+  }
+}

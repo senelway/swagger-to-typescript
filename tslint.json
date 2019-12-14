@@ -1,0 +1,20 @@
+{
+  "extends": "tslint:recommended",
+  "jsRules": {},
+  "rules": {
+    "quotemark": [true, "single", "avoid-escape", "avoid-template"],
+    "trailing-comma": [false],
+    "ordered-imports": false,
+    "prefer-for-of": false,
+    "member-ordering": [
+      true,
+      { "order": "fields-first" }
+    ],
+    "variable-name": false,
+    "arrow-parens": false,
+    "interface-name": false,
+    "no-reference-import": false,
+    "interface-over-type-literal": false,
+    "object-literal-sort-keys": false
+  }
+}

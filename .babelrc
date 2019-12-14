@@ -1,0 +1,19 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "modules": false,
+      "targets": { "node": 6 }
+    }]
+  ],
+  "plugins": [
+    "ramda",
+    "lodash",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
+    "babel-plugin-rewire-exports",
+    ["@babel/plugin-transform-runtime", {
+      "helpers": true,
+      "regenerator": true
+    }]
+  ]
+}
