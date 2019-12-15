@@ -39,7 +39,7 @@ export default (
   const checkType = (type: string) => modificators.typeReplace[type] || type;
 
   const checNameInterface = (name: string) => {
-    if (regexpMethods.nameInterface.test(name) && regexpMethods.nameInterface) {
+    if (regexpMethods.nameInterface.test(name)) {
       const vl = name.match(regexpMethods.nameInterface);
       return vl ? vl[1] : vl;
     }

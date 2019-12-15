@@ -1,9 +1,10 @@
 {
   "name": "swatts",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0-beta.3",
   "homepage": "https://github.com/stk-dmitry/swagger-to-typescript#readme",
   "description": "generate typescript interface and enums using swagger",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stk-dmitry/swagger-to-typescript.git"
@@ -35,7 +36,7 @@
     "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.7.6",
     "babel-plugin-rewire-exports": "^2.0.0",
-    "rollup": "^1.27.12",
+    "rollup": "^1.27.13",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
